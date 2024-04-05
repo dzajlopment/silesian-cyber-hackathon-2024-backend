@@ -7,7 +7,7 @@ router.route("/")
     .post(meterController.createOne)
     .get(meterController.getAll)
 
-router.route("/:")
+router.route("/:id")
     .patch(meterController.patchOne)
     .delete(meterController.deleteOne)
     .get(meterController.getOne)

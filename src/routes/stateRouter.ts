@@ -7,7 +7,7 @@ router.route("/")
     .post(stateController.createOne)
     .get(stateController.getAll)
 
-router.route("/:")
+router.route("/:id")
     .patch(stateController.patchOne)
     .delete(stateController.deleteOne)
     .get(stateController.getOne)
