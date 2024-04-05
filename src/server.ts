@@ -9,7 +9,7 @@ const db = process.env.MONGO_URL!;
 
 function handleDbError(){
     console.log("No database link provided!");
-    process.exit(0);
+    process.exit(1);
 }
 
 if(!db){
@@ -24,5 +24,5 @@ mongoose.connect(db).then(()=>{
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, ()=>{
-    console.log("Server connected")
+    console.log(`App running on port ${port}`)
 })
