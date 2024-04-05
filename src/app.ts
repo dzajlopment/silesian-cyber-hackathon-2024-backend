@@ -2,7 +2,6 @@ import express from "express";
 import bodyParser, { json } from "body-parser";
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
-import ExpressMongoSanitize from "express-mongo-sanitize";
 import meterRouter from "./routes/meterRouter";
 import meterHistoryRouter from "./routes/meterHistoryRouter"
 import stateRouter from "./routes/stateRouter";
