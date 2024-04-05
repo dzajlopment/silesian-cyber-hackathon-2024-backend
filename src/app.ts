@@ -1,5 +1,5 @@
 import express from "express";
-import bodyParser from "body-parser";
+import bodyParser, { json } from "body-parser";
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
 import ExpressMongoSanitize from "express-mongo-sanitize";
@@ -20,6 +20,8 @@ app.use(bodyParser.json());
 
 //Secure HTTP connections
 app.use(helmet());
+
+app.use('/', json)
 
 //Remove '$' and '.' characters which could be used for a malicious attack attempt
 // app.use(ExpressMongoSanitize);
