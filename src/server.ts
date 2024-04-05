@@ -10,7 +10,6 @@ const db = process.env.MONGO_URL!;
 function handleDbError(){
     console.log("No database link provided!");
     process.exit(0);
-
 }
 
 if(!db){
