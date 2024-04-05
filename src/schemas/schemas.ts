@@ -53,7 +53,4 @@ const meterSchema = new Schema<Meter>({
     // FIXME
     state: { type: Schema.Types.ObjectId, ref: "State", required: true },
 });
-
-const MeterHistory = mongoose.model("MeterHistory", meterHistorySchema);
-const State = mongoose.model("State", stateSchema);
-const Meter = mongoose.model("Meter", meterSchema);
+export {meterHistorySchema, stateSchema, meterSchema}
