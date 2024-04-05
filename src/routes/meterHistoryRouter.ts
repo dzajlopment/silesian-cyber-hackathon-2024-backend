@@ -3,6 +3,8 @@ import meterHistoryController from "../controllers/meterHistoryController"
 
 const router = express.Router();
 
+//route - /api/v1/meterHistory
+//methods - GET, POST, PATCH, DELETE
 router.route("/")
     .post(meterHistoryController.createOne)
     .get(meterHistoryController.getAll)

@@ -1,3 +1,5 @@
+//Class for a simpler look at the errors
+
 class AppError extends Error {
     statusCode: number
     status: "fail" | "error";

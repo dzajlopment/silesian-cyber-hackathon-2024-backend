@@ -3,6 +3,8 @@ import accidentController from "../controllers/accidentController"
 
 const router = express.Router();
 
+//route - /api/v1/accident
+//methods - GET, POST, PATCH, DELETE
 router.route("/")
     .post(accidentController.createOne)
     .get(accidentController.getAll)

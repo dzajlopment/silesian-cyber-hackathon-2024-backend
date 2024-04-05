@@ -1,5 +1,5 @@
 import express from "express";
-import bodyParser, { json } from "body-parser";
+import bodyParser from "body-parser";
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
 import meterRouter from "./routes/meterRouter";
@@ -11,7 +11,7 @@ import malfunctionRouter from './routes/malfunctionRouter'
 const app = express()
 
 const rateLimiter = rateLimit({
-    windowMs: 1000 * 5,
+    windowMs: 1000 * 5, //5 seconds
     limit: 10,
     legacyHeaders: false
 })

@@ -3,6 +3,8 @@ import malfunctionController from "../controllers/malfunctionController"
 
 const router = express.Router();
 
+//route - /api/v1/malfunction
+//methods - GET, POST, PATCH, DELETE
 router.route("/")
     .post(malfunctionController.createOne)
     .get(malfunctionController.getAll)

@@ -46,7 +46,7 @@ const accidentSchema = new Schema({
     locationName: {type: String, required: true},
     victims: {type: Boolean, required: true},
     description: {type: String, required: false}
-})
+});
 const Accident = mongoose.model("Accident", accidentSchema);
 
 
@@ -59,7 +59,7 @@ const malfunctionSchema = new Schema({
     locationName: {type: String, required: false},
     device: {type: String, required: true},
     description: {type: String, required: false},
-})
+});
 const Malfunction = mongoose.model("Malfunction", malfunctionSchema);
 
 export {Meter, MeterHistory, State, Accident, Malfunction}
