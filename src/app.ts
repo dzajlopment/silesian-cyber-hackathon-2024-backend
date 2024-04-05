@@ -7,6 +7,7 @@ import meterHistoryRouter from "./routes/meterHistoryRouter"
 import stateRouter from "./routes/stateRouter";
 import accidentRouter from './routes/accidentRouter'
 import malfunctionRouter from './routes/malfunctionRouter'
+import cors from "cors"
 
 const app = express()
 
@@ -24,6 +25,9 @@ app.use(bodyParser.json());
 
 //Secure HTTP connections
 app.use(helmet());
+
+app.use(cors());
+app.use("*", cors());
 
 //Routes
 app.use("/api/v1/meter", meterRouter);
