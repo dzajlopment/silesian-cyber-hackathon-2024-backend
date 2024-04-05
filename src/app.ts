@@ -1,7 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
 import rateLimit from "express-rate-limit";
-import sanitize from "mongo-sanitize";
 import helmet from "helmet";
 
 const app = express()
@@ -12,9 +11,15 @@ const rateLimiter = rateLimit({
     legacyHeaders: false
 })
 
+//Max 10 request per 5 seconds
 app.use(rateLimiter);
+
+//Add JSON support
 app.use(bodyParser.json());
+
+//Secure HTTP connections
 app.use(helmet());
+
 console.log("App");
 
 export default app;
