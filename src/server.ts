@@ -12,9 +12,11 @@ function handleDbError(){
     process.exit(0);
 
 }
+
 if(!db){
     handleDbError()
 }
+
 mongoose.connect(db).then(()=>{
     console.log("Connected to database");
 }).catch(()=>{
