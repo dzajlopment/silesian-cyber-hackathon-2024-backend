@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv"
+import app from "./app";
 
 dotenv.config({})
 
@@ -18,4 +19,9 @@ mongoose.connect(db).then(()=>{
     console.log("Connected to database");
 }).catch(()=>{
     console.log("Failed to connect to database")
+})
+
+const port = process.env.PORT || 3000;
+const server = app.listen(port, ()=>{
+    console.log("Server connected")
 })

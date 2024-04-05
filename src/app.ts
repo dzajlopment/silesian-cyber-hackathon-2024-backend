@@ -13,3 +13,5 @@ const rateLimiter = rateLimit({
 app.use(rateLimiter);
 app.use(bodyParser.json());
 console.log("App");
+
+export default app;
