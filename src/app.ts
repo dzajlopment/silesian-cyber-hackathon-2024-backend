@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 //Secure HTTP connections
 app.use(helmet());
 
-app.use('/', json)
+
 
 //Remove '$' and '.' characters which could be used for a malicious attack attempt
 // app.use(ExpressMongoSanitize);

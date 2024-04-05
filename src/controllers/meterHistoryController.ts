@@ -2,9 +2,9 @@ import { MeterHistory } from "../models/models";
 import factory from "./handleFactory"
 
 export default {
-    getAllMeterHistories: factory.getAll(MeterHistory),
-    getMeterHistory: factory.getOne(MeterHistory),
-    createMeterHistory: factory.createOne(MeterHistory),
-    patchMeterHistory: factory.patchOne(MeterHistory),
-    deleteMeterHistory: factory.deleteOne(MeterHistory),
+    getAll: factory.getAll(MeterHistory),
+    getOne: factory.getOne(MeterHistory),
+    createOne: factory.createOne(MeterHistory),
+    patchOne: factory.patchOne(MeterHistory),
+    deleteOne: factory.deleteOne(MeterHistory),
 }
